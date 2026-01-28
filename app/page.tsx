@@ -16,8 +16,6 @@ export default function Home() {
 
         <div className="">
           <Project/>
-          <Project/>
-          <Project/>
         </div>
         
 

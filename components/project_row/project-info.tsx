@@ -1,9 +1,10 @@
 import React from 'react'
 
-const ProjectInfo = () => {
+const ProjectInfo = ({title, description}: {title: string; descirption:string}) => {
   return (
     <div className="mt-30">
-      <p> description here</p>
+      <p>{title}</p>
+      <p>{description}</p>
     </div>
   )
 }

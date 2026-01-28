@@ -10,11 +10,28 @@ const project = () => {
       
      <div className="flex justify-center gap-72 mb-12">
           <div>
-            <ProjectInfo/>
+            <ProjectInfo
+              title="ZotMeet"
+              description="Meeting Scheduler with Study Room intergration for UCI students"
+            />
+
+             <ProjectInfo
+              title="ZotMeet"
+              description="Meeting Scheduler with Study Room intergration for UCI students"
+            />
+
+             <ProjectInfo
+              title="ZotMeet"
+              description="Meeting Scheduler with Study Room intergration for UCI students"
+            />
           </div>
 
 
-          <div>
+          <div className="">
+            <ProjectCard image={ZotMeetPic} />
+
+            <ProjectCard image={ZotMeetPic} />
+
             <ProjectCard image={ZotMeetPic} />
           </div>
 
