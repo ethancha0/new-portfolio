@@ -11,8 +11,19 @@ const header = () => {
 
 
       <TextGenerateEffect 
-        words = "I'm a Full Stack Developer studying Software Engineering @ University of California, Irvine"
+        words = "I'm a Full Stack Developer"
          />
+      
+      <div>
+
+      </div>
+
+      <div className="">
+        <TextGenerateEffect
+          words= "Currently studying Software Engineering at UC Irvine"
+          />
+      </div>
+
     </div>
   )
 }

@@ -14,6 +14,9 @@ const ProjectCard = ({ image, alt = 'Project screenshot' }: ProjectCardProps) =>
           src={image}
           alt={alt}
           fill
+          sizes="(max-width: 768px) 100vw, 640px"
+          quality={100}
+          unoptimized
           className="object-cover"
         />
       </div>

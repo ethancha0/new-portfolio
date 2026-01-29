@@ -13,7 +13,7 @@ const project = () => {
           <div>
             <ProjectInfo
               title="ZotMeet"
-              description="Meeting Scheduler with Study Room intergration for UCI students"
+              description="Efficient meeting + Study rooom scheduler"
             />
 
              <ProjectInfo
