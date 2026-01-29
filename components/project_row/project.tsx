@@ -2,6 +2,7 @@ import React from 'react'
 import ProjectCard from '@/components/project_row/project-card'
 import ProjectInfo from '@/components/project_row/project-info'
 import ZotMeetPic from '@/public/ZotMeetSS.png'
+import AnimatedProject from "@/components/expandable-card-demo-grid"
 
 
 const project = () => {
@@ -26,13 +27,18 @@ const project = () => {
             />
           </div>
 
-
+          {/*
           <div className="">
             <ProjectCard image={ZotMeetPic} />
 
             <ProjectCard image={ZotMeetPic} />
 
             <ProjectCard image={ZotMeetPic} />
+          </div>
+          */}
+
+          <div>
+            <AnimatedProject/>
           </div>
 
         </div>

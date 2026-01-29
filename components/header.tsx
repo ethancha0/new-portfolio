@@ -1,11 +1,18 @@
 import React from 'react'
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 
 const header = () => {
   return (
     <div className="p-12 border-b-4">
-      <h1>Ethan Chao</h1>
 
-      <p>I'm a Full Stack Developer studying Software Engineering @ University of California, Irvine </p>
+      <TextGenerateEffect
+        words="Ethan Chao"
+      />
+
+
+      <TextGenerateEffect 
+        words = "I'm a Full Stack Developer studying Software Engineering @ University of California, Irvine"
+         />
     </div>
   )
 }

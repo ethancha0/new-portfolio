@@ -4,6 +4,7 @@ import Project from "@/components/project_row/project"
 import Header from "@/components/header"
 
 
+
 export default function Home() {
   return (
     <div className="">
@@ -16,6 +17,7 @@ export default function Home() {
 
         <div className="">
           <Project/>
+
         </div>
         
 
