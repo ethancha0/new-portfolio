@@ -12,7 +12,7 @@ const header = () => {
 
 
       <TextGenerateEffect 
-        words = "I'm a Full Stack Developer"
+        words = "Full Stack Developer"
          />
       
       <div>
@@ -21,7 +21,7 @@ const header = () => {
 
       <div className="">
         <TextGenerateEffect
-          words= "Currently studying Software Engineering at UC Irvine"
+          words= "Currently Studying Software Engineering at UC Irvine"
           />
       </div>
 
@@ -31,7 +31,7 @@ const header = () => {
           rel="noopener noreferrer">
           <FaGithub size={25}/>
        </a>
-       
+
        <a href="https://www.linkedin.com/in/ethanchaoo/"
           target="_blank"
           rel="noopener noreferrer">

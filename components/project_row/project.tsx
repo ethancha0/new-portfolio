@@ -9,39 +9,27 @@ const project = () => {
   return (
     <div>
       
-     <div className="flex justify-center gap-72 mb-12">
-          <div>
-            <ProjectInfo
-              title="ZotMeet"
-              description="Efficient meeting + Study rooom scheduler"
-            />
+      <div className="flex justify-center gap-72 mb-12">
+              <div className="">
+                <ProjectInfo
+                  title="ZotMeet"
+                  description="Efficient meeting + Study rooom scheduler"
+                  />
 
-             <ProjectInfo
-              title="ZotMeet"
-              description="Meeting Scheduler with Study Room intergration for UCI students"
-            />
 
-             <ProjectInfo
-              title="ZotMeet"
-              description="Meeting Scheduler with Study Room intergration for UCI students"
-            />
-          </div>
+                <ProjectInfo
+                  title="Pixelmon"
+                  description="Fun little game"
+                />
 
-          {/*
-          <div className="">
-            <ProjectCard image={ZotMeetPic} />
+              </div>
 
-            <ProjectCard image={ZotMeetPic} />
+            <div>
+              <AnimatedProject/>
+            </div>
+           
 
-            <ProjectCard image={ZotMeetPic} />
-          </div>
-          */}
-
-          <div>
-            <AnimatedProject/>
-          </div>
-
-        </div>
+      </div>
 
 
     </div>

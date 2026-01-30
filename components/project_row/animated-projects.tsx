@@ -78,8 +78,7 @@ export function ExpandableCardDemo() {
                   alt={active.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 1000px"
-                  quality={100}
-                  unoptimized
+                  quality={90}
                   className="sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
@@ -147,7 +146,6 @@ export function ExpandableCardDemo() {
                   fill
                   sizes="(max-width: 768px) 100vw, 896px"
                   quality={100}
-                  unoptimized
                   className="rounded-lg object-cover object-top"
                 />
               </motion.div>

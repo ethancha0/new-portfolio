@@ -72,16 +72,27 @@ export default function ExpandableCardDemo() {
               ref={ref}
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`} className="relative w-full h-80 lg:h-80">
-                <Image
-                  src={active.src}
-                  alt={active.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 1000px"
-                  quality={100}
-                  unoptimized
-                  className="sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
+              <motion.div layoutId={`image-${active.title}-${id}`} className="relative w-full aspect-video bg-black sm:rounded-tr-lg sm:rounded-tl-lg overflow-hidden">
+                {active.title === "ZotMeet" ? (
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInLine
+                    className="w-full h-full object-contain"
+                    src="/project-videos/ZotMeetVideo.mp4"
+                  >
+                    <source src="/project-videos/ZotMeetVideo.mp4" type="video/mp4" />
+                  </video>
+                ) : (
+                  <Image
+                    fill
+                    src={active.src}
+                    alt={active.title}
+                    sizes="(max-width: 768px) 100vw, 500px"
+                    className="object-cover object-top"
+                  />
+                )}
               </motion.div>
 
               <div>
@@ -140,16 +151,17 @@ export default function ExpandableCardDemo() {
             className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col  w-full">
-              <motion.div layoutId={`image-${card.title}-${id}`} className="relative h-60 w-full">
-                <Image
-                  src={card.src}
-                  alt={card.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 896px"
-                  quality={100}
-                  unoptimized
-                  className="rounded-lg object-cover object-top"
-                />
+              
+              <motion.div layoutId={`image-${card.title}-${id}`}>
+                <div className ="relative w-full  aspect-video border border-slate-200 border-1 rounded-md shadow shadow-2xl">
+                  <Image
+                    fill
+                    src={card.src}
+                    alt={card.title}
+                    sizes="(max-width: 768px) 100vw, 600px"
+                    className=" w-full  rounded-lg object-cover object-top"
+                  />
+                </div>
               </motion.div>
               <div className="flex justify-center items-center flex-col">
                 <motion.h3
@@ -222,18 +234,40 @@ const cards = [
     },
   },
   {
-    description: "Pixelmon",
-    title: "Pixelmon",
+    description: "Food Recommendation System",
+    title: "Nom",
     src: ZotMeetPic.src,
     ctaText: "Visit",
-    ctaLink: "https://pixelmon-ll342mwso-ethanchao2005-6638s-projects.vercel.app/",
+    ctaLink: "/",
     content: () => {
       return (
         <p>
-      
+          desc
         </p>
       );
     },
   },
 
+  {
+    description: "Pixelmon",
+    title: "For Whom The Bell Tolls",
+    src: ZotMeetPic.src,
+    ctaText: "Visit",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Metallica, an iconic American heavy metal band, is renowned for their
+          powerful sound and intense performances that resonate deeply with
+          their audience. Formed in Los Angeles, California, they have become a
+          cultural icon in the heavy metal music industry. <br /> <br /> Their
+          songs often reflect themes of aggression, social issues, and personal
+          struggles, capturing the essence of the heavy metal genre. With a
+          career spanning over four decades, Metallica has released numerous hit
+          albums and singles that have garnered them a massive fan following
+          both in the United States and abroad.
+        </p>
+      );
+    },
+  },
 ];
