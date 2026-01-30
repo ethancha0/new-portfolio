@@ -3,7 +3,8 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import ZotMeetPic from "../public/ZotMeetSS.png"
+import ZotMeetPic from "../public/project-imgs/ZotMeetSS.png"
+import PixelMonPic from "../public/project-imgs/PixelmonSS.png"
 import Image from "next/image"
 
 export default function ExpandableCardDemo() {
@@ -73,16 +74,16 @@ export default function ExpandableCardDemo() {
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`} className="relative w-full aspect-video bg-black sm:rounded-tr-lg sm:rounded-tl-lg overflow-hidden">
-                {active.title === "ZotMeet" ? (
+                {active.videosrc ? (
                   <video
                     autoPlay
                     loop
                     muted
-                    playsInLine
+                    playsInline
                     className="w-full h-full object-contain"
-                    src="/project-videos/ZotMeetVideo.mp4"
+                    src={active.videosrc}
                   >
-                    <source src="/project-videos/ZotMeetVideo.mp4" type="video/mp4" />
+                    <source src={active.videosrc} type="video/mp4" />
                   </video>
                 ) : (
                   <Image
@@ -223,6 +224,7 @@ const cards = [
     description: "In collaboration with ICS Student Council",
     title: "ZotMeet",
     src: ZotMeetPic.src,
+    videosrc: "/project-videos/ZotMeetVideo.mp4",
     ctaText: "Visit",
     ctaLink: "https://zotmeet.com/",
     content: () => {
@@ -234,11 +236,12 @@ const cards = [
     },
   },
   {
-    description: "Food Recommendation System",
-    title: "Nom",
-    src: ZotMeetPic.src,
+    description: "Fun Game",
+    title: "Pixelmon",
+    src: PixelMonPic.src,
+    videosrc: "/project-videos/PixelmonVid.mp4",
     ctaText: "Visit",
-    ctaLink: "/",
+    ctaLink: "https://pixelmon-ll342mwso-ethanchao2005-6638s-projects.vercel.app/",
     content: () => {
       return (
         <p>
@@ -249,8 +252,8 @@ const cards = [
   },
 
   {
-    description: "Pixelmon",
-    title: "For Whom The Bell Tolls",
+    description: "Nom",
+    title: "Food Recommendation System",
     src: ZotMeetPic.src,
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
