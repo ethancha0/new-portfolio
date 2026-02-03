@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import ZotMeetPic from "../public/project-imgs/ZotMeetSS.png"
 import PixelMonPic from "../public/project-imgs/PixelmonSS.png"
+import NomPic from "../public/project-imgs/NomPic.png"
 import Image from "next/image"
 
 export default function ExpandableCardDemo() {
@@ -91,6 +92,7 @@ export default function ExpandableCardDemo() {
                     src={active.src}
                     alt={active.title}
                     sizes="(max-width: 768px) 100vw, 500px"
+                    quality={100}
                     className="object-cover object-top"
                   />
                 )}
@@ -160,6 +162,7 @@ export default function ExpandableCardDemo() {
                     src={card.src}
                     alt={card.title}
                     sizes="(max-width: 768px) 100vw, 600px"
+                    quality={100}
                     className=" w-full  rounded-lg object-cover object-top"
                   />
                 </div>
@@ -223,7 +226,7 @@ const cards = [
   {
     description: "In collaboration with ICS Student Council",
     title: "ZotMeet",
-    src: ZotMeetPic.src,
+    src: ZotMeetPic,
     videosrc: "/project-videos/ZotMeetVideo.mp4",
     ctaText: "Visit",
     ctaLink: "https://zotmeet.com/",
@@ -238,7 +241,7 @@ const cards = [
   {
     description: "Fun Game",
     title: "Pixelmon",
-    src: PixelMonPic.src,
+    src: PixelMonPic,
     videosrc: "/project-videos/PixelmonVid.mp4",
     ctaText: "Visit",
     ctaLink: "https://pixelmon-ll342mwso-ethanchao2005-6638s-projects.vercel.app/",
@@ -252,23 +255,15 @@ const cards = [
   },
 
   {
-    description: "Nom",
+    description: "For when you're hangry",
     title: "Food Recommendation System",
-    src: ZotMeetPic.src,
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    src: NomPic,
+    ctaText: "Available Soon",
+    ctaLink: "/",
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
+          
         </p>
       );
     },
