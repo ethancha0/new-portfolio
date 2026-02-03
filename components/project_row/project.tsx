@@ -16,13 +16,14 @@ const project = () => {
                   description="Efficient meeting + Study room scheduler"
                 />
                 <ProjectInfo
-                  title="Pixelmon"
-                  description="Game based on the Animated Series"
-                />
-                <ProjectInfo
                   title="Nom"
                   description="Food Recommendation System"
                 />
+                <ProjectInfo
+                  title="Pixelmon"
+                  description="Game based on the Animated Series"
+                />
+                
               </div>
 
             <div>

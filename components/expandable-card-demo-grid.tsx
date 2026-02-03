@@ -233,8 +233,28 @@ const cards = [
     content: () => {
       return (
         <p>
-        zotmeet desc
+        A meeting and study room scheduler for UCI students. 
         </p>
+      );
+    },
+  },
+   {
+    description: "For when you're hangry",
+    title: "Food Recommendation System",
+    src: NomPic,
+    ctaText: "Available Soon",
+    ctaLink: "/",
+    content: () => {
+      return (
+        <div>
+        <p className="font-bold">
+          Working hard or hardly working?
+        </p>
+        <p>
+          A fun project I'm currently working on that reccommends foods to try and recipes to cook based on 
+          the ones you're craving
+        </p>
+        </div>
       );
     },
   },
@@ -248,24 +268,11 @@ const cards = [
     content: () => {
       return (
         <p>
-          desc
+          A fun game to test your knowledge of the original 151 pokemon
         </p>
       );
     },
   },
 
-  {
-    description: "For when you're hangry",
-    title: "Food Recommendation System",
-    src: NomPic,
-    ctaText: "Available Soon",
-    ctaLink: "/",
-    content: () => {
-      return (
-        <p>
-          
-        </p>
-      );
-    },
-  },
+ 
 ];
