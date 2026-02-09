@@ -4,6 +4,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import ZotMeetPic from "../public/project-imgs/ZotMeetSS.png"
+import stockPic from "../public/project-imgs/stocktrackerSS.png"
 import PixelMonPic from "../public/project-imgs/PixelmonSS.png"
 import NomPic from "../public/project-imgs/NomPic.png"
 import Image from "next/image"
@@ -239,11 +240,30 @@ const cards = [
     },
   },
    {
+    description: "Spend money to make money",
+    title: "Signalist",
+    src: stockPic,
+    ctaText: "Available Soon",
+    ctaLink: "https://github.com/ethancha0/signalist-stock-tracker",
+    content: () => {
+      return (
+        <div>
+        <p className="font-bold">
+          Working hard or hardly working?
+        </p>
+        <p>
+          A project I'm currently working on to beat the S&P 500
+        </p>
+        </div>
+      );
+    },
+  },
+   {
     description: "For when you're hangry",
     title: "Food Recommendation System",
     src: NomPic,
     ctaText: "Available Soon",
-    ctaLink: "/",
+    ctaLink: "https://github.com/ethancha0/nom-food-recommendation",
     content: () => {
       return (
         <div>

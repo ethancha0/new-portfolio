@@ -14,6 +14,10 @@ const project = () => {
                 <ProjectInfo
                   title="ZotMeet"
                   description="Efficient meeting + Study room scheduler"
+                /> 
+                <ProjectInfo
+                  title="Signalist"
+                  description="AI Integrated Stock Tracker & Market Analysis"
                 />
                 <ProjectInfo
                   title="Nom"
@@ -23,6 +27,8 @@ const project = () => {
                   title="Pixelmon"
                   description="Game based on the Animated Series"
                 />
+
+               
                 
               </div>
 
