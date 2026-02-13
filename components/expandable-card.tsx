@@ -9,7 +9,7 @@ import PixelMonPic from "../public/project-imgs/PixelmonSS.png"
 import NomPic from "../public/project-imgs/NomPic.png"
 import Image from "next/image"
 import LogoLoop from "./animations/logo-loop";
-import { ZotmeetLogos } from "@/lib/constants";
+import { ZotmeetLogos, ZotmeetSubLogos, SignalistLogos, SignalistSubLogos, NomLogos, NomSubLogos } from "@/lib/constants";
 
 export default function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -243,12 +243,26 @@ const cards = [
 
         <LogoLoop 
         logos={ZotmeetLogos}
-        speed={30}
+        gap={10}
+        speed={15}
         logoHeight={20}
-        scaleOnHover={true}
-        fadeOut={true}
+        scaleOnHover={false}
         showLabels={true}
-        
+        labelPlacement="bottom"
+        scrollMode="bounce"
+        width="100%"
+
+         />
+         <LogoLoop 
+         logos={ZotmeetSubLogos}
+         gap={10}
+         speed={15}
+         logoHeight={20}
+         scaleOnHover={true}
+         showLabels={true}
+         labelPlacement="bottom"
+         scrollMode="bounce"
+         width="100%"
          />
          </div>
       );
@@ -262,13 +276,36 @@ const cards = [
     ctaLink: "https://github.com/ethancha0/signalist-stock-tracker",
     content: () => {
       return (
-        <div>
+        <div className="flex flex-col gap-4">
         <p className="font-bold">
           Working hard or hardly working?
         </p>
         <p>
           A project I'm currently working on to beat the S&P 500
         </p>
+
+        <LogoLoop 
+        logos={SignalistLogos}
+        gap={10}
+        speed={15}
+        logoHeight={20}
+        scaleOnHover={true}
+        showLabels={true}
+        labelPlacement="bottom"
+        scrollMode="bounce"
+        width="100%"
+        />
+        <LogoLoop 
+        logos={SignalistSubLogos}
+        gap={10}
+        speed={15}
+        logoHeight={20}
+        scaleOnHover={true}
+        showLabels={true}
+        labelPlacement="bottom"
+        scrollMode="bounce"
+        width="100%"
+        />
         </div>
       );
     },
@@ -281,7 +318,7 @@ const cards = [
     ctaLink: "https://github.com/ethancha0/nom-food-recommendation",
     content: () => {
       return (
-        <div>
+        <div className="flex flex-col gap-4">
         <p className="font-bold">
           Working hard or hardly working?
         </p>
@@ -289,6 +326,30 @@ const cards = [
           A fun project I'm currently working on that reccommends foods to try and recipes to cook based on 
           the ones you're craving
         </p>
+        <LogoLoop 
+        logos={NomLogos}
+        gap={10}
+        speed={15}
+        logoHeight={20}
+        scaleOnHover={true}
+        showLabels={true}
+        labelPlacement="bottom"
+        scrollMode="bounce"
+        bounceFitMode="edges"
+        width="100%"
+        />
+        <LogoLoop 
+        logos={NomSubLogos}
+        gap={10}
+        speed={15}
+        logoHeight={20}
+        scaleOnHover={true}
+        showLabels={true}
+        labelPlacement="bottom"
+        scrollMode="bounce"
+        bounceFitMode="edges"
+        width="100%"
+        />
         </div>
       );
     },
