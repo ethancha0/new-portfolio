@@ -8,6 +8,8 @@ import stockPic from "../public/project-imgs/stocktrackerSS.png"
 import PixelMonPic from "../public/project-imgs/PixelmonSS.png"
 import NomPic from "../public/project-imgs/NomPic.png"
 import Image from "next/image"
+import LogoLoop from "./animations/logo-loop";
+import { ZotmeetLogos } from "@/lib/constants";
 
 export default function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -113,6 +115,7 @@ export default function ExpandableCardDemo() {
                       className="text-neutral-600 dark:text-neutral-400 text-base"
                     >
                       {active.description}
+
                     </motion.p>
                   </div>
 
@@ -233,17 +236,29 @@ const cards = [
     ctaLink: "https://zotmeet.com/",
     content: () => {
       return (
-        <p>
+        <div className="flex flex-col gap-4">
+        <p className="">
         A meeting and study room scheduler for UCI students. 
         </p>
+
+        <LogoLoop 
+        logos={ZotmeetLogos}
+        speed={30}
+        logoHeight={20}
+        scaleOnHover={true}
+        fadeOut={true}
+        showLabels={true}
+        
+         />
+         </div>
       );
     },
   },
    {
-    description: "Spend money to make money",
+    description: "Beating the S&P 500",
     title: "Signalist",
     src: stockPic,
-    ctaText: "Available Soon",
+    ctaText: "View Github",
     ctaLink: "https://github.com/ethancha0/signalist-stock-tracker",
     content: () => {
       return (
@@ -262,7 +277,7 @@ const cards = [
     description: "For when you're hangry",
     title: "Food Recommendation System",
     src: NomPic,
-    ctaText: "Available Soon",
+    ctaText: "View Github",
     ctaLink: "https://github.com/ethancha0/nom-food-recommendation",
     content: () => {
       return (
@@ -275,21 +290,6 @@ const cards = [
           the ones you're craving
         </p>
         </div>
-      );
-    },
-  },
-  {
-    description: "Fun Game",
-    title: "Pixelmon",
-    src: PixelMonPic,
-    videosrc: "/project-videos/PixelmonVid.mp4",
-    ctaText: "Visit",
-    ctaLink: "https://pixelmon-ll342mwso-ethanchao2005-6638s-projects.vercel.app/",
-    content: () => {
-      return (
-        <p>
-          A fun game to test your knowledge of the original 151 pokemon
-        </p>
       );
     },
   },

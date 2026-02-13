@@ -2,7 +2,7 @@ import React from 'react'
 import ProjectCard from '@/components/project_row/project-card'
 import ProjectInfo from '@/components/project_row/project-info'
 import ZotMeetPic from '@/public/ZotMeetSS.png'
-import AnimatedProject from "@/components/expandable-card-demo-grid"
+import AnimatedProject from "@/components/expandable-card"
 
 
 const project = () => {
@@ -23,11 +23,6 @@ const project = () => {
                   title="Nom"
                   description="Food Recommendation System"
                 />
-                <ProjectInfo
-                  title="Pixelmon"
-                  description="Game based on the Animated Series"
-                />
-
                
                 
               </div>
