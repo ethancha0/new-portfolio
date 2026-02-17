@@ -126,7 +126,7 @@ export default function ExpandableCardDemo() {
                     exit={{ opacity: 0 }}
                     href={active.ctaLink}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-[#362a55] text-white"
                   >
                     {active.ctaText}
                   </motion.a>
@@ -160,12 +160,12 @@ export default function ExpandableCardDemo() {
             <div className="flex gap-4 flex-col  w-full">
               
               <motion.div layoutId={`image-${card.title}-${id}`}>
-                <div className ="relative w-full  aspect-video border border-slate-200 border-1 rounded-md shadow shadow-2xl">
+                <div className="relative w-full aspect-video overflow-hidden border border-slate-200 border-1 rounded-md shadow shadow-2xl">
                   <Image
                     fill
                     src={card.src}
                     alt={card.title}
-                    sizes="(max-width: 768px) 100vw, 600px"
+                    sizes="(max-width: 768px) 100vw, 640px"
                     quality={100}
                     className=" w-full  rounded-lg object-cover object-top"
                   />
@@ -277,11 +277,8 @@ const cards = [
     content: () => {
       return (
         <div className="flex flex-col gap-4">
-        <p className="font-bold">
-          Working hard or hardly working?
-        </p>
         <p>
-          A project I'm currently working on to beat the S&P 500
+          A project aimed to consistently beat the S&P 500
         </p>
 
         <LogoLoop 
@@ -314,17 +311,14 @@ const cards = [
     description: "For when you're hangry",
     title: "Food Recommendation System",
     src: NomPic,
-    ctaText: "View Github",
-    ctaLink: "https://github.com/ethancha0/nom-food-recommendation",
+    ctaText: "Visit",
+    ctaLink: "https://nom-food-recommendation.vercel.app/",
     content: () => {
       return (
         <div className="flex flex-col gap-4">
-        <p className="font-bold">
-          Working hard or hardly working?
-        </p>
         <p>
-          A fun project I'm currently working on that reccommends foods to try and recipes to cook based on 
-          the ones you're craving
+          A fun project that reccommends foods and recipes to cook based on 
+          your cravings
         </p>
         <LogoLoop 
         logos={NomLogos}

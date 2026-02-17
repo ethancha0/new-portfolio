@@ -120,3 +120,18 @@ export const NomSubLogos = [
         href: "https://www.fastapi.org",
     }
 ]
+
+export const HeaderLogos = [
+    {
+        src: "/icons/github.svg",
+        alt: "OpenAI",
+        href: "https://www.openai.com",
+    },
+    {
+        src: "/icons/linkedin.svg",
+        alt: "FastAPI",
+        href: "https://www.fastapi.org",
+    }
+
+
+]

@@ -521,8 +521,9 @@ export const LogoLoop = React.memo<LogoLoopProps>(
               'rounded-lg border border-black/25 dark:border-white/25',
               'bg-white/60 dark:bg-white/5',
               'px-3 py-2',
-              'transition-opacity duration-200 ease-linear',
-              'hover:opacity-80',
+              scrollMode === 'bounce'
+                ? 'transition-none'
+                : 'transition-opacity duration-200 ease-linear hover:opacity-80',
               'focus-visible:outline focus-visible:outline-current focus-visible:outline-offset-2'
             )}
             href={(item as any).href}
@@ -560,7 +561,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
           </li>
         );
       },
-      [isVertical, scaleOnHover, renderItem, showLabels, labelPlacement]
+      [isVertical, scaleOnHover, renderItem, showLabels, labelPlacement, scrollMode]
     );
 
     const logoLists = useMemo(
@@ -592,6 +593,8 @@ export const LogoLoop = React.memo<LogoLoopProps>(
       [width, cssVariables, style, isVertical]
     );
 
+    const effectiveFadeOut = fadeOut && scrollMode === 'loop';
+
     const shouldCenterTrack = useMemo(() => {
       if (scrollMode !== 'bounce') return false;
       if (copyCount !== 1) return false;
@@ -620,7 +623,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
 
     return (
       <div ref={containerRef} className={rootClasses} style={containerStyle} role="region" aria-label={ariaLabel}>
-        {fadeOut && (
+        {effectiveFadeOut && (
           <>
             {isVertical ? (
               <>
@@ -646,14 +649,6 @@ export const LogoLoop = React.memo<LogoLoopProps>(
                 <div
                   aria-hidden
                   className={cx(
-                    'pointer-events-none absolute inset-y-0 left-0 z-10',
-                    'w-[clamp(24px,8%,120px)]',
-                    'bg-[linear-gradient(to_right,var(--logoloop-fadeColor,var(--logoloop-fadeColorAuto))_0%,rgba(0,0,0,0)_100%)]'
-                  )}
-                />
-                <div
-                  aria-hidden
-                  className={cx(
                     'pointer-events-none absolute inset-y-0 right-0 z-10',
                     'w-[clamp(24px,8%,120px)]',
                     'bg-[linear-gradient(to_left,var(--logoloop-fadeColor,var(--logoloop-fadeColorAuto))_0%,rgba(0,0,0,0)_100%)]'
@@ -666,16 +661,26 @@ export const LogoLoop = React.memo<LogoLoopProps>(
 
         <div
           className={cx(
-            'flex will-change-transform select-none relative z-0',
-            'motion-reduce:transform-none',
-            isVertical ? 'flex-col h-max w-full' : 'flex-row',
-            shouldCenterTrack ? 'w-full justify-center' : 'w-max'
+            'relative z-0 select-none',
+            isVertical ? 'w-full' : 'w-full',
+            // Keep the hover target stable even if the inner track translates.
+            scrollMode === 'bounce' && 'cursor-default'
           )}
-          ref={trackRef}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          {logoLists}
+          <div
+            className={cx(
+              'flex will-change-transform',
+              'motion-reduce:transform-none',
+              isVertical ? 'flex-col h-max w-full' : 'flex-row w-max',
+              // Center the (static) track within the parent without making it full-width.
+              shouldCenterTrack && 'mx-auto'
+            )}
+            ref={trackRef}
+          >
+            {logoLists}
+          </div>
         </div>
       </div>
     );
