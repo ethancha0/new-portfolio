@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import ZotMeetPic from "../public/project-imgs/ZotMeetSS.png"
 import stockPic from "../public/project-imgs/stocktrackerSS.png"
-import PixelMonPic from "../public/project-imgs/PixelmonSS.png"
+import JobFinderSS from "../public/project-imgs/jobfinderSS.png"
 import NomPic from "../public/project-imgs/NomPic.png"
 import Image from "next/image"
 import LogoLoop from "./animations/logo-loop";
@@ -268,6 +268,50 @@ const cards = [
       );
     },
   },
+
+  {
+    description: "Instant tracking & job alerts",
+    title: "Ethan's Job Finder",
+    src: JobFinderSS,
+    ctaText: "Visit",
+    ctaLink: "https://jobfinder-two-lake.vercel.app/",
+    content: () => {
+      return (
+        <div className="flex flex-col gap-4">
+        <p>
+          
+        </p>
+        <LogoLoop 
+        logos={NomLogos}
+        gap={10}
+        speed={15}
+        logoHeight={20}
+        scaleOnHover={true}
+        showLabels={true}
+        labelPlacement="bottom"
+        scrollMode="bounce"
+        bounceFitMode="edges"
+        width="100%"
+        />
+        <LogoLoop 
+        logos={NomSubLogos}
+        gap={10}
+        speed={15}
+        logoHeight={20}
+        scaleOnHover={true}
+        showLabels={true}
+        labelPlacement="bottom"
+        scrollMode="bounce"
+        bounceFitMode="edges"
+        width="100%"
+        />
+        </div>
+      );
+    },
+  },
+
+
+
    {
     description: "Beating the S&P 500",
     title: "Signalist",
@@ -307,47 +351,7 @@ const cards = [
       );
     },
   },
-   {
-    description: "For when you're hangry",
-    title: "Food Recommendation System",
-    src: NomPic,
-    ctaText: "Visit",
-    ctaLink: "https://nom-food-recommendation.vercel.app/",
-    content: () => {
-      return (
-        <div className="flex flex-col gap-4">
-        <p>
-          A fun project that reccommends foods and recipes to cook based on 
-          your cravings
-        </p>
-        <LogoLoop 
-        logos={NomLogos}
-        gap={10}
-        speed={15}
-        logoHeight={20}
-        scaleOnHover={true}
-        showLabels={true}
-        labelPlacement="bottom"
-        scrollMode="bounce"
-        bounceFitMode="edges"
-        width="100%"
-        />
-        <LogoLoop 
-        logos={NomSubLogos}
-        gap={10}
-        speed={15}
-        logoHeight={20}
-        scaleOnHover={true}
-        showLabels={true}
-        labelPlacement="bottom"
-        scrollMode="bounce"
-        bounceFitMode="edges"
-        width="100%"
-        />
-        </div>
-      );
-    },
-  },
+   
 
  
 ];
