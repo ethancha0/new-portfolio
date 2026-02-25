@@ -6,11 +6,15 @@ import { cn } from "@/lib/utils";
 export const TextGenerateEffect = ({
   words,
   className,
+  wordClassName,
+  containerClassName,
   filter = true,
   duration = 0.5,
 }: {
   words: string;
   className?: string;
+  wordClassName?: string;
+  containerClassName?: string;
   filter?: boolean;
   duration?: number;
 }) => {
@@ -37,7 +41,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="dark:text-white text-black opacity-0"
+              className={cn("opacity-0", wordClassName)}
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
@@ -51,11 +55,9 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-bold", className)}>
-      <div className="">
-        <div className=" dark:text-white text-black text-2xl leading-snug tracking-wide">
-          {renderWords()}
-        </div>
+    <div className={cn("font-bold", containerClassName)}>
+      <div className={cn("dark:text-white text-black text-2xl leading-snug tracking-wide", className)}>
+        {renderWords()}
       </div>
     </div>
   );
