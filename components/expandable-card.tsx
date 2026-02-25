@@ -77,7 +77,7 @@ export default function ExpandableCardDemo() {
               ref={ref}
               className="w-[95vw] max-w-[1100px] h-[92vh] sm:h-[90vh] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`} className="relative w-full aspect-video bg-black sm:rounded-tr-lg sm:rounded-tl-lg overflow-hidden">
+              <motion.div layoutId={`image-${active.title}-${id}`} className="relative w-full aspect-video bg-white dark:bg-neutral-900 sm:rounded-tr-lg sm:rounded-tl-lg overflow-hidden">
                 {active.videosrc ? (
                   <video
                     autoPlay
@@ -149,7 +149,7 @@ export default function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="min-w-md mx-auto w-full items-start gap-4">
+      <ul className="mx-auto w-full  grid grid-cols-1 md:grid-cols-2 gap-4">
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
@@ -160,7 +160,7 @@ export default function ExpandableCardDemo() {
             <div className="flex gap-4 flex-col  w-full">
               
               <motion.div layoutId={`image-${card.title}-${id}`}>
-                <div className="relative w-full aspect-video overflow-hidden border border-slate-200 border-1 rounded-md shadow shadow-2xl">
+                <div className="relative w-full h-56  aspect-video overflow-hidden border border-slate-200 border-1 rounded-md shadow shadow-2xl">
                   <Image
                     fill
                     src={card.src}

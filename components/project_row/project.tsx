@@ -10,6 +10,9 @@ const project = () => {
     <div>
       
       <div className="flex justify-center gap-72 mb-12">
+        {/*
+
+      
               <div className="flex flex-col gap-38">
                 <ProjectInfo
                   title="ZotMeet"
@@ -24,9 +27,9 @@ const project = () => {
                   description="Food Recommendation System"
                 />
                
-                
+               
               </div>
-
+  */} 
             <div>
               <AnimatedProject/>
             </div>
