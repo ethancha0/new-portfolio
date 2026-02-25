@@ -19,7 +19,7 @@ export default function Home() {
           <Project/>
         </section>
 
-        <section id="about" className="scroll-mt-[25vh] flex justify-center">
+        <section id="about" className="mt-24 scroll-mt-[25vh] flex justify-center">
           <About/>
         </section>
     

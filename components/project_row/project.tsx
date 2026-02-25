@@ -8,9 +8,9 @@ import ChevronButton from '../ui/chevron-button'
 
 const project = () => {
   return (
-    <div>
+    <div className="w-full">
       
-      <div className="flex justify-center gap-72 mb-12">
+      <div className="relative w-full mb-12">
         {/*
 
       
@@ -31,11 +31,16 @@ const project = () => {
                
               </div>
   */} 
-            <div>
-              <AnimatedProject/>
-            </div>
+        <AnimatedProject/>
 
-            <ChevronButton redirect={"projectScroll"}/>
+        <ChevronButton
+          redirect={"aboutScroll"}
+          position="inline"
+          wrapperClassName="py-16"
+          buttonClassName="p-6 rounded-full"
+        />
+
+       
            
 
       </div>
