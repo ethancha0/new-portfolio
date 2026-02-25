@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Project from "@/components/project_row/project"
 import Header from "@/components/header"
-import ZotMeetPicture from "@/public/ZotMeetSS.png"
+
 
 
 

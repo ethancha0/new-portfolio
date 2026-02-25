@@ -51,7 +51,7 @@ export default function ExpandableCardDemo() {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100]">
+          <div className="fixed inset-0 grid place-items-center z-[100] p-4 sm:p-6 lg:p-10">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -75,7 +75,7 @@ export default function ExpandableCardDemo() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-[95vw] max-w-[1100px] h-[92vh] sm:h-[90vh] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`} className="relative w-full aspect-video bg-black sm:rounded-tr-lg sm:rounded-tl-lg overflow-hidden">
                 {active.videosrc ? (
@@ -94,7 +94,7 @@ export default function ExpandableCardDemo() {
                     fill
                     src={active.src}
                     alt={active.title}
-                    sizes="(max-width: 768px) 100vw, 500px"
+                    sizes="(max-width: 768px) 95vw, 1100px"
                     quality={100}
                     className="object-cover object-top"
                   />

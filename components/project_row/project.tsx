@@ -13,11 +13,11 @@ const project = () => {
               <div className="flex flex-col gap-38">
                 <ProjectInfo
                   title="ZotMeet"
-                  description="Efficient meeting + Study room scheduler"
+                  description="Meeting & Study Room Scheduler for UCI Students"
                 /> 
                 <ProjectInfo
                   title="Signalist"
-                  description="AI Integrated Stock Tracker & Market Analysis"
+                  description="Stock Tracker & AI-Powered Market Analysis"
                 />
                 <ProjectInfo
                   title="Nom"
