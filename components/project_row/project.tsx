@@ -3,6 +3,7 @@ import ProjectCard from '@/components/project_row/project-card'
 import ProjectInfo from '@/components/project_row/project-info'
 import ZotMeetPic from '@/public/ZotMeetSS.png'
 import AnimatedProject from "@/components/expandable-card"
+import ChevronButton from '../ui/chevron-button'
 
 
 const project = () => {
@@ -33,6 +34,8 @@ const project = () => {
             <div>
               <AnimatedProject/>
             </div>
+
+            <ChevronButton redirect={"projectScroll"}/>
            
 
       </div>

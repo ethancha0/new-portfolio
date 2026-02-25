@@ -3,9 +3,8 @@
 import React from 'react';
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { motion } from "motion/react"
-import {ChevronDown} from "lucide-react"
 import { Button } from './ui/button';
+import ChevronButton from './ui/chevron-button';
 
 const header = () => {
 
@@ -71,19 +70,9 @@ const header = () => {
 
 
 
-      <motion.div
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 1, duration: 1 }}
-  className="absolute bottom-8 left-1/2 -translate-x-1/2"
->
-  <button
-    onClick={scrollToProjects}
-    className="animate-bounce text-gray-400 dark:text-gray-600 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
-  >
-    <ChevronDown className="w-8 h-8" />
-  </button>
-</motion.div>
+
+    <ChevronButton redirect={"projectScroll"}/>
+
 
    
     
