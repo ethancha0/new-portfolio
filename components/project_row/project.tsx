@@ -4,6 +4,8 @@ import ProjectInfo from '@/components/project_row/project-info'
 import ZotMeetPic from '@/public/ZotMeetSS.png'
 import AnimatedProject from "@/components/expandable-card"
 import ChevronButton from '../ui/chevron-button'
+import { SparkleIcon, Sparkles } from 'lucide-react'
+
 
 
 const project = () => {
@@ -30,8 +32,22 @@ const project = () => {
                
                
               </div>
-  */} 
-        <AnimatedProject/>
+  */}   
+        <div className="flex justify-center">
+          <div className="flex flex-col">
+            <h1 className="text-7xl p-35 pb-10 font-bold text-gray-800">Projects</h1>
+            <div className="flex justify-center items-center gap-2">
+               <Sparkles className="h-5 w-5"/> 
+              <p className="text-gray-600 text-xl">Just a few things I've been working on </p>
+            </div>
+           
+            
+          </div>
+     
+          
+          <AnimatedProject/>
+        </div>
+        
 
         <ChevronButton
           redirect={"aboutScroll"}
