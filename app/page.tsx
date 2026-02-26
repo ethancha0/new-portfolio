@@ -1,7 +1,8 @@
 import Project from "@/components/project_row/project"
 import Header from "@/components/header"
-import About from "@/components/ui/about";
-import ChevronButton from "@/components/ui/chevron-button";
+import About from "@/components/about";
+import Contact from "@/components/contact";
+
 
 
 
@@ -21,6 +22,10 @@ export default function Home() {
 
         <section id="about" className="mt-24 scroll-mt-[25vh] flex justify-center">
           <About/>
+        </section>
+
+        <section id="contact" className="scroll-mt-[25vh] flex justify-center">
+          <Contact/>
         </section>
     
 

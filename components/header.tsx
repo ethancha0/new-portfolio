@@ -5,6 +5,8 @@ import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from './ui/button';
 import ChevronButton from './ui/chevron-button';
+import { ArrowUpRight, Mail } from 'lucide-react';
+import Link from 'next/link';
 
 const header = () => {
 
@@ -14,6 +16,7 @@ const header = () => {
 
   const scrollToProjects = () => scrollToId("projects");
   const scrollToAbout = () => scrollToId("about");
+  const scrollToContact = () => scrollToId("contact");
 
 
 
@@ -57,6 +60,8 @@ const header = () => {
           rel="noopener noreferrer">
         <FaLinkedin size={30}/> 
       </a>
+
+ 
       </div>
 
     <div className="mt-6 gap-4 flex">
@@ -67,8 +72,14 @@ const header = () => {
       <Button variant="secondary" size="lg" className="border border-black" onClick={scrollToAbout}>
         About me
       </Button>
-
-
+    
+      <Button variant="secondary" size="lg" className="border border-black">
+       <ArrowUpRight/>
+       <Link href="https://drive.google.com/file/d/12Dr4MBOGNh9ZVZ8bGgBKlJ1j_IQ5DQqX/view?usp=sharing">Resume</Link>
+        
+      </Button>
+  
+    
 
 
     <ChevronButton redirect={"projectScroll"}/>

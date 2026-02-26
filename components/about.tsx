@@ -1,8 +1,9 @@
 import React from 'react'
+import ChevronButton from './ui/chevron-button'
 
 const About = () => {
   return (
-    <div className="mt-35 p-8 flex gap-110 ">
+    <div className="flex gap-110 ">
 
         <div>
             <div className="max-w-4xl">
@@ -19,6 +20,14 @@ const About = () => {
             When I'm not programming, you can find me collaboarting with <br/>student organizations like 
             Tomo no Kai and FUSION on campus.<br/> I also enjoy playing electric guitar, basketball, bouldering, and growing bonsai 
         </p>
+
+         <ChevronButton
+          redirect={"contactScroll"}
+          position="inline"
+          wrapperClassName="py-16"
+          buttonClassName="p-6 rounded-full"
+        />
+
         </div>
        
 

@@ -18,12 +18,25 @@ const ChevronButton = ({
   buttonClassName = "",
 }: ChevronButtonProps) => {
 
-    const scrollToId = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const scrollToId = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
-  const scrollToProjects = () => scrollToId("projects");
-  const scrollToAbout = () => scrollToId("about");
+  const mapRedirectToId = (value: string) => {
+    if (value === "projectScroll") return "projects";
+    if (value === "aboutScroll") return "about";
+    if (value === "contactScroll") return "contact";
+    return value; // allow passing a raw DOM id
+  };
+
+  const handleClick = () => {
+    const id = mapRedirectToId(redirect);
+    if (!id) return;
+    scrollToId(id);
+  };
 
 
 
@@ -40,7 +53,7 @@ const ChevronButton = ({
         }
       >
         <button
-          onClick={redirect == "projectScroll" ? scrollToProjects : scrollToAbout}
+          onClick={handleClick}
           className={[
             "animate-bounce text-gray-400 dark:text-gray-600 hover:text-gray-600 dark:hover:text-gray-400 transition-colors",
             buttonClassName,
