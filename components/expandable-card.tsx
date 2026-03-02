@@ -231,7 +231,7 @@ const cards = [
     description: "In collaboration with ICS Student Council",
     title: "ZotMeet",
     src: ZotMeetPic,
-    videosrc: "/project-videos/ZotMeetVideo.mp4",
+    //videosrc: "/project-videos/ZotMeetVideo.mp4",
     ctaText: "Visit",
     ctaLink: "https://zotmeet.com/",
     content: () => {
@@ -311,8 +311,9 @@ const cards = [
   },
 
 
-
+/*
    {
+    
     description: "Beating the S&P 500",
     title: "Signalist",
     src: stockPic,
@@ -351,6 +352,7 @@ const cards = [
       );
     },
   },
+  */
    
 
  
