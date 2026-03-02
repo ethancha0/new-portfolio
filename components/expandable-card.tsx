@@ -4,12 +4,10 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import ZotMeetPic from "../public/project-imgs/ZotMeetSS.png"
-import stockPic from "../public/project-imgs/stocktrackerSS.png"
 import JobFinderSS from "../public/project-imgs/jobfinderSS.png"
-import NomPic from "../public/project-imgs/NomPic.png"
 import Image from "next/image"
 import LogoLoop from "./animations/logo-loop";
-import { ZotmeetLogos, ZotmeetSubLogos, SignalistLogos, SignalistSubLogos, NomLogos, NomSubLogos } from "@/lib/constants";
+import { ZotmeetLogos, ZotmeetSubLogos, NomLogos, NomSubLogos } from "@/lib/constants";
 
 export default function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -78,27 +76,14 @@ export default function ExpandableCardDemo() {
               className="w-[95vw] max-w-[1100px] h-[92vh] sm:h-[90vh] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`} className="relative w-full aspect-video bg-white dark:bg-neutral-900 sm:rounded-tr-lg sm:rounded-tl-lg overflow-hidden">
-                {active.videosrc ? (
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-contain"
-                    src={active.videosrc}
-                  >
-                    <source src={active.videosrc} type="video/mp4" />
-                  </video>
-                ) : (
-                  <Image
-                    fill
-                    src={active.src}
-                    alt={active.title}
-                    sizes="(max-width: 768px) 95vw, 1100px"
-                    quality={100}
-                    className="object-cover object-top"
-                  />
-                )}
+                <Image
+                  fill
+                  src={active.src}
+                  alt={active.title}
+                  sizes="(max-width: 768px) 95vw, 1100px"
+                  quality={100}
+                  className="object-cover object-top"
+                />
               </motion.div>
 
               <div>
@@ -231,7 +216,6 @@ const cards = [
     description: "In collaboration with ICS Student Council",
     title: "ZotMeet",
     src: ZotMeetPic,
-    //videosrc: "/project-videos/ZotMeetVideo.mp4",
     ctaText: "Visit",
     ctaLink: "https://zotmeet.com/",
     content: () => {
