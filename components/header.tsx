@@ -72,12 +72,14 @@ const header = () => {
       <Button variant="secondary" size="lg" className="border border-black" onClick={scrollToAbout}>
         About me
       </Button>
-    
+
+      {/*
       <Button variant="secondary" size="lg" className="border border-black">
        <ArrowUpRight/>
        <Link href="https://drive.google.com/file/d/12Dr4MBOGNh9ZVZ8bGgBKlJ1j_IQ5DQqX/view?usp=sharing">Resume</Link>
         
       </Button>
+      */>
   
     
 
